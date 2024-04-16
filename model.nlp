@@ -1,0 +1,1872 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "do,free,how,spend,time,usual,you,your": {
+            "intent": "question.free_time_activities",
+            "domain": "default"
+          },
+          "are,favorit,hobbi,interest,or,what,your": {
+            "intent": "question.hobbies_interests",
+            "domain": "default"
+          },
+          "a,do,in,independ,or,prefer,team,work,you": {
+            "intent": "question.teamwork_preference",
+            "domain": "default"
+          },
+          "achiev,far,greatest,is,so,what,your": {
+            "intent": "question.greatest_achievement",
+            "domain": "default"
+          },
+          "deal,do,failur,how,with,you": {
+            "intent": "question.failure_handling",
+            "domain": "default"
+          },
+          "about,is,life,opinion,what,your": {
+            "intent": "question.life_opinion",
+            "domain": "default"
+          },
+          "aliv,feel,make,what,you": {
+            "intent": "question.alive_feeling",
+            "domain": "default"
+          },
+          "are,for,futur,plan,the,what,your": {
+            "intent": "question.future_plans",
+            "domain": "default"
+          },
+          "achiev,ani,do,goal,have,object,or,to,want,you": {
+            "intent": "question.goals_objectives",
+            "domain": "default"
+          },
+          "a,be,better,inspir,person,to,what,you": {
+            "intent": "question.inspiration_better_person",
+            "domain": "default"
+          },
+          "advers,and,challeng,do,handl,how,you": {
+            "intent": "question.challenges_adversities_handling",
+            "domain": "default"
+          },
+          "fear,greatest,is,what,your": {
+            "intent": "question.greatest_fear",
+            "domain": "default"
+          },
+          "believ,destini,do,free,in,or,will,you": {
+            "intent": "question.destiny_free_will",
+            "domain": "default"
+          },
+          "is,love,on,perspect,what,your": {
+            "intent": "question.love_perspective",
+            "domain": "default"
+          },
+          "defin,do,how,success,you": {
+            "intent": "question.success_definition",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "question.free_time_activities": "default",
+          "question.hobbies_interests": "default",
+          "question.teamwork_preference": "default",
+          "question.greatest_achievement": "default",
+          "question.failure_handling": "default",
+          "question.life_opinion": "default",
+          "question.alive_feeling": "default",
+          "question.future_plans": "default",
+          "question.goals_objectives": "default",
+          "question.inspiration_better_person": "default",
+          "question.challenges_adversities_handling": "default",
+          "question.greatest_fear": "default",
+          "question.destiny_free_will": "default",
+          "question.love_perspective": "default",
+          "question.success_definition": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "How do you usually spend your free time?",
+            "intent": "question.free_time_activities"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are your favorite hobbies or interests?",
+            "intent": "question.hobbies_interests"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you prefer working in a team or independently?",
+            "intent": "question.teamwork_preference"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your greatest achievement so far?",
+            "intent": "question.greatest_achievement"
+          },
+          {
+            "domain": "default",
+            "utterance": "How do you deal with failure?",
+            "intent": "question.failure_handling"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your opinion about life?",
+            "intent": "question.life_opinion"
+          },
+          {
+            "domain": "default",
+            "utterance": "What makes you feel alive?",
+            "intent": "question.alive_feeling"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are your plans for the future?",
+            "intent": "question.future_plans"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have any goal or objective you want to achieve?",
+            "intent": "question.goals_objectives"
+          },
+          {
+            "domain": "default",
+            "utterance": "What inspires you to be a better person?",
+            "intent": "question.inspiration_better_person"
+          },
+          {
+            "domain": "default",
+            "utterance": "How do you handle challenges and adversities?",
+            "intent": "question.challenges_adversities_handling"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your greatest fear?",
+            "intent": "question.greatest_fear"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you believe in destiny or free will?",
+            "intent": "question.destiny_free_will"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your perspective on love?",
+            "intent": "question.love_perspective"
+          },
+          {
+            "domain": "default",
+            "utterance": "How do you define success?",
+            "intent": "question.success_definition"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "how": 1,
+              "do": 1,
+              "you": 1,
+              "usual": 1,
+              "spend": 1,
+              "your": 1,
+              "free": 1,
+              "time": 1,
+              "what": 1,
+              "are": 1,
+              "favorit": 1,
+              "hobbi": 1,
+              "or": 1,
+              "interest": 1,
+              "prefer": 1,
+              "work": 1,
+              "in": 1,
+              "a": 1,
+              "team": 1,
+              "independ": 1,
+              "is": 1,
+              "greatest": 1,
+              "achiev": 1,
+              "so": 1,
+              "far": 1,
+              "deal": 1,
+              "with": 1,
+              "failur": 1,
+              "opinion": 1,
+              "about": 1,
+              "life": 1,
+              "make": 1,
+              "feel": 1,
+              "aliv": 1,
+              "plan": 1,
+              "for": 1,
+              "the": 1,
+              "futur": 1,
+              "have": 1,
+              "ani": 1,
+              "goal": 1,
+              "object": 1,
+              "want": 1,
+              "to": 1,
+              "inspir": 1,
+              "be": 1,
+              "better": 1,
+              "person": 1,
+              "handl": 1,
+              "challeng": 1,
+              "and": 1,
+              "advers": 1,
+              "fear": 1,
+              "believ": 1,
+              "destini": 1,
+              "will": 1,
+              "perspect": 1,
+              "on": 1,
+              "love": 1,
+              "defin": 1,
+              "success": 1
+            },
+            "intents": {
+              "question.free_time_activities": 1,
+              "question.hobbies_interests": 1,
+              "question.teamwork_preference": 1,
+              "question.greatest_achievement": 1,
+              "question.failure_handling": 1,
+              "question.life_opinion": 1,
+              "question.alive_feeling": 1,
+              "question.future_plans": 1,
+              "question.goals_objectives": 1,
+              "question.inspiration_better_person": 1,
+              "question.challenges_adversities_handling": 1,
+              "question.greatest_fear": 1,
+              "question.destiny_free_will": 1,
+              "question.love_perspective": 1,
+              "question.success_definition": 1
+            },
+            "intentFeatures": {
+              "question.free_time_activities": {
+                "how": 1,
+                "do": 1,
+                "you": 1,
+                "usual": 1,
+                "spend": 1,
+                "your": 1,
+                "free": 1,
+                "time": 1
+              },
+              "question.hobbies_interests": {
+                "what": 1,
+                "are": 1,
+                "your": 1,
+                "favorit": 1,
+                "hobbi": 1,
+                "or": 1,
+                "interest": 1
+              },
+              "question.teamwork_preference": {
+                "do": 1,
+                "you": 1,
+                "prefer": 1,
+                "work": 1,
+                "in": 1,
+                "a": 1,
+                "team": 1,
+                "or": 1,
+                "independ": 1
+              },
+              "question.greatest_achievement": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "greatest": 1,
+                "achiev": 1,
+                "so": 1,
+                "far": 1
+              },
+              "question.failure_handling": {
+                "how": 1,
+                "do": 1,
+                "you": 1,
+                "deal": 1,
+                "with": 1,
+                "failur": 1
+              },
+              "question.life_opinion": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "opinion": 1,
+                "about": 1,
+                "life": 1
+              },
+              "question.alive_feeling": {
+                "what": 1,
+                "make": 1,
+                "you": 1,
+                "feel": 1,
+                "aliv": 1
+              },
+              "question.future_plans": {
+                "what": 1,
+                "are": 1,
+                "your": 1,
+                "plan": 1,
+                "for": 1,
+                "the": 1,
+                "futur": 1
+              },
+              "question.goals_objectives": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "goal": 1,
+                "or": 1,
+                "object": 1,
+                "want": 1,
+                "to": 1,
+                "achiev": 1
+              },
+              "question.inspiration_better_person": {
+                "what": 1,
+                "inspir": 1,
+                "you": 1,
+                "to": 1,
+                "be": 1,
+                "a": 1,
+                "better": 1,
+                "person": 1
+              },
+              "question.challenges_adversities_handling": {
+                "how": 1,
+                "do": 1,
+                "you": 1,
+                "handl": 1,
+                "challeng": 1,
+                "and": 1,
+                "advers": 1
+              },
+              "question.greatest_fear": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "greatest": 1,
+                "fear": 1
+              },
+              "question.destiny_free_will": {
+                "do": 1,
+                "you": 1,
+                "believ": 1,
+                "in": 1,
+                "destini": 1,
+                "or": 1,
+                "free": 1,
+                "will": 1
+              },
+              "question.love_perspective": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "perspect": 1,
+                "on": 1,
+                "love": 1
+              },
+              "question.success_definition": {
+                "how": 1,
+                "do": 1,
+                "you": 1,
+                "defin": 1,
+                "success": 1
+              }
+            },
+            "featuresToIntent": {
+              "how": [
+                "question.free_time_activities",
+                "question.failure_handling",
+                "question.challenges_adversities_handling",
+                "question.success_definition"
+              ],
+              "do": [
+                "question.free_time_activities",
+                "question.teamwork_preference",
+                "question.failure_handling",
+                "question.goals_objectives",
+                "question.challenges_adversities_handling",
+                "question.destiny_free_will",
+                "question.success_definition"
+              ],
+              "you": [
+                "question.free_time_activities",
+                "question.teamwork_preference",
+                "question.failure_handling",
+                "question.alive_feeling",
+                "question.goals_objectives",
+                "question.inspiration_better_person",
+                "question.challenges_adversities_handling",
+                "question.destiny_free_will",
+                "question.success_definition"
+              ],
+              "usual": [
+                "question.free_time_activities"
+              ],
+              "spend": [
+                "question.free_time_activities"
+              ],
+              "your": [
+                "question.free_time_activities",
+                "question.hobbies_interests",
+                "question.greatest_achievement",
+                "question.life_opinion",
+                "question.future_plans",
+                "question.greatest_fear",
+                "question.love_perspective"
+              ],
+              "free": [
+                "question.free_time_activities",
+                "question.destiny_free_will"
+              ],
+              "time": [
+                "question.free_time_activities"
+              ],
+              "what": [
+                "question.hobbies_interests",
+                "question.greatest_achievement",
+                "question.life_opinion",
+                "question.alive_feeling",
+                "question.future_plans",
+                "question.inspiration_better_person",
+                "question.greatest_fear",
+                "question.love_perspective"
+              ],
+              "are": [
+                "question.hobbies_interests",
+                "question.future_plans"
+              ],
+              "favorit": [
+                "question.hobbies_interests"
+              ],
+              "hobbi": [
+                "question.hobbies_interests"
+              ],
+              "or": [
+                "question.hobbies_interests",
+                "question.teamwork_preference",
+                "question.goals_objectives",
+                "question.destiny_free_will"
+              ],
+              "interest": [
+                "question.hobbies_interests"
+              ],
+              "prefer": [
+                "question.teamwork_preference"
+              ],
+              "work": [
+                "question.teamwork_preference"
+              ],
+              "in": [
+                "question.teamwork_preference",
+                "question.destiny_free_will"
+              ],
+              "a": [
+                "question.teamwork_preference",
+                "question.inspiration_better_person"
+              ],
+              "team": [
+                "question.teamwork_preference"
+              ],
+              "independ": [
+                "question.teamwork_preference"
+              ],
+              "is": [
+                "question.greatest_achievement",
+                "question.life_opinion",
+                "question.greatest_fear",
+                "question.love_perspective"
+              ],
+              "greatest": [
+                "question.greatest_achievement",
+                "question.greatest_fear"
+              ],
+              "achiev": [
+                "question.greatest_achievement",
+                "question.goals_objectives"
+              ],
+              "so": [
+                "question.greatest_achievement"
+              ],
+              "far": [
+                "question.greatest_achievement"
+              ],
+              "deal": [
+                "question.failure_handling"
+              ],
+              "with": [
+                "question.failure_handling"
+              ],
+              "failur": [
+                "question.failure_handling"
+              ],
+              "opinion": [
+                "question.life_opinion"
+              ],
+              "about": [
+                "question.life_opinion"
+              ],
+              "life": [
+                "question.life_opinion"
+              ],
+              "make": [
+                "question.alive_feeling"
+              ],
+              "feel": [
+                "question.alive_feeling"
+              ],
+              "aliv": [
+                "question.alive_feeling"
+              ],
+              "plan": [
+                "question.future_plans"
+              ],
+              "for": [
+                "question.future_plans"
+              ],
+              "the": [
+                "question.future_plans"
+              ],
+              "futur": [
+                "question.future_plans"
+              ],
+              "have": [
+                "question.goals_objectives"
+              ],
+              "ani": [
+                "question.goals_objectives"
+              ],
+              "goal": [
+                "question.goals_objectives"
+              ],
+              "object": [
+                "question.goals_objectives"
+              ],
+              "want": [
+                "question.goals_objectives"
+              ],
+              "to": [
+                "question.goals_objectives",
+                "question.inspiration_better_person"
+              ],
+              "inspir": [
+                "question.inspiration_better_person"
+              ],
+              "be": [
+                "question.inspiration_better_person"
+              ],
+              "better": [
+                "question.inspiration_better_person"
+              ],
+              "person": [
+                "question.inspiration_better_person"
+              ],
+              "handl": [
+                "question.challenges_adversities_handling"
+              ],
+              "challeng": [
+                "question.challenges_adversities_handling"
+              ],
+              "and": [
+                "question.challenges_adversities_handling"
+              ],
+              "advers": [
+                "question.challenges_adversities_handling"
+              ],
+              "fear": [
+                "question.greatest_fear"
+              ],
+              "believ": [
+                "question.destiny_free_will"
+              ],
+              "destini": [
+                "question.destiny_free_will"
+              ],
+              "will": [
+                "question.destiny_free_will"
+              ],
+              "perspect": [
+                "question.love_perspective"
+              ],
+              "on": [
+                "question.love_perspective"
+              ],
+              "love": [
+                "question.love_perspective"
+              ],
+              "defin": [
+                "question.success_definition"
+              ],
+              "success": [
+                "question.success_definition"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "how",
+                "do",
+                "you",
+                "usual",
+                "spend",
+                "your",
+                "free",
+                "time",
+                "what",
+                "are",
+                "favorit",
+                "hobbi",
+                "or",
+                "interest",
+                "prefer",
+                "work",
+                "in",
+                "a",
+                "team",
+                "independ",
+                "is",
+                "greatest",
+                "achiev",
+                "so",
+                "far",
+                "deal",
+                "with",
+                "failur",
+                "opinion",
+                "about",
+                "life",
+                "make",
+                "feel",
+                "aliv",
+                "plan",
+                "for",
+                "the",
+                "futur",
+                "have",
+                "ani",
+                "goal",
+                "object",
+                "want",
+                "to",
+                "inspir",
+                "be",
+                "better",
+                "person",
+                "handl",
+                "challeng",
+                "and",
+                "advers",
+                "fear",
+                "believ",
+                "destini",
+                "will",
+                "perspect",
+                "on",
+                "love",
+                "defin",
+                "success"
+              ],
+              "intents": [
+                "question.free_time_activities",
+                "question.hobbies_interests",
+                "question.teamwork_preference",
+                "question.greatest_achievement",
+                "question.failure_handling",
+                "question.life_opinion",
+                "question.alive_feeling",
+                "question.future_plans",
+                "question.goals_objectives",
+                "question.inspiration_better_person",
+                "question.challenges_adversities_handling",
+                "question.greatest_fear",
+                "question.destiny_free_will",
+                "question.love_perspective",
+                "question.success_definition"
+              ],
+              "perceptrons": [
+                [
+                  1.0767947435379028,
+                  0.24852661788463593,
+                  0.14224357903003693,
+                  2.894331932067871,
+                  2.894331932067871,
+                  2.0468292236328125,
+                  2.4169788360595703,
+                  2.894331932067871,
+                  -0.9512469172477722,
+                  -0.2932303845882416,
+                  -0.09154129773378372,
+                  -0.09154129773378372,
+                  -0.9282262921333313,
+                  -0.09154129773378372,
+                  -0.13017889857292175,
+                  -0.13017889857292175,
+                  -0.6326623558998108,
+                  -0.1679234653711319,
+                  -0.13017889857292175,
+                  -0.13017889857292175,
+                  -0.5357372760772705,
+                  -0.25100553035736084,
+                  -0.27235859632492065,
+                  -0.10607195645570755,
+                  -0.10607195645570755,
+                  -0.5763708353042603,
+                  -0.5763708353042603,
+                  -0.5763708353042603,
+                  -0.1505754142999649,
+                  -0.1505754142999649,
+                  -0.1505754142999649,
+                  -0.059472765773534775,
+                  -0.059472765773534775,
+                  -0.059472765773534775,
+                  -0.16371409595012665,
+                  -0.16371409595012665,
+                  -0.16371409595012665,
+                  -0.16371409595012665,
+                  -0.11802785098552704,
+                  -0.11802785098552704,
+                  -0.11802785098552704,
+                  -0.11802785098552704,
+                  -0.11802785098552704,
+                  -0.15485438704490662,
+                  -0.01349550299346447,
+                  -0.01349550299346447,
+                  -0.01349550299346447,
+                  -0.01349550299346447,
+                  -0.4551595151424408,
+                  -0.4551595151424408,
+                  -0.4551595151424408,
+                  -0.4551595151424408,
+                  -0.09676791727542877,
+                  -0.4476853013038635,
+                  -0.4476853013038635,
+                  -0.4476853013038635,
+                  -0.10203022509813309,
+                  -0.10203022509813309,
+                  -0.10203022509813309,
+                  -0.6310466527938843,
+                  -0.6310466527938843,
+                  -0.3540741660019433
+                ],
+                [
+                  -0.023838059976696968,
+                  -0.5633215308189392,
+                  -0.778566300868988,
+                  -0.0015260352520272136,
+                  -0.0015260352520272136,
+                  0.8132219910621643,
+                  -0.1840433031320572,
+                  -0.0015260352520272136,
+                  0.600989043712616,
+                  1.8885713815689087,
+                  2.869227170944214,
+                  2.869227170944214,
+                  2.326406240463257,
+                  2.869227170944214,
+                  -0.1849099099636078,
+                  -0.1849099099636078,
+                  -0.39174726605415344,
+                  -0.23355476558208466,
+                  -0.1849099099636078,
+                  -0.1849099099636078,
+                  -1.0639704465866089,
+                  -0.4679770767688751,
+                  -0.3875288963317871,
+                  -0.21763010323047638,
+                  -0.21763010323047638,
+                  -0.015127093531191349,
+                  -0.015127093531191349,
+                  -0.015127093531191349,
+                  -0.32512998580932617,
+                  -0.32512998580932617,
+                  -0.32512998580932617,
+                  -0.1342429369688034,
+                  -0.1342429369688034,
+                  -0.1342429369688034,
+                  -0.9010212421417236,
+                  -0.9010212421417236,
+                  -0.9010212421417236,
+                  -0.9010212421417236,
+                  -0.11911407113075256,
+                  -0.11911407113075256,
+                  -0.11911407113075256,
+                  -0.11911407113075256,
+                  -0.11911407113075256,
+                  -0.16652822494506836,
+                  -0.024974964559078217,
+                  -0.024974964559078217,
+                  -0.024974964559078217,
+                  -0.024974964559078217,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.19580571353435516,
+                  -0.18077082931995392,
+                  -0.18077082931995392,
+                  -0.18077082931995392,
+                  -0.19808603823184967,
+                  -0.19808603823184967,
+                  -0.19808603823184967,
+                  0,
+                  0,
+                  0.01119054714292058
+                ],
+                [
+                  -0.6013613343238831,
+                  0.4146755039691925,
+                  -0.03437273949384689,
+                  -0.01172048132866621,
+                  -0.01172048132866621,
+                  -0.18950825929641724,
+                  -0.8428701758384705,
+                  -0.01172048132866621,
+                  -0.613346517086029,
+                  -0.0861331969499588,
+                  -0.06747056543827057,
+                  -0.06747056543827057,
+                  0.9419266581535339,
+                  -0.06747056543827057,
+                  2.380216360092163,
+                  2.380216360092163,
+                  1.458896517753601,
+                  2.0780744552612305,
+                  2.380216360092163,
+                  2.380216360092163,
+                  -0.05475957691669464,
+                  -0.02492372877895832,
+                  -0.38925379514694214,
+                  -0.02492372877895832,
+                  -0.02492372877895832,
+                  -0.20660483837127686,
+                  -0.20660483837127686,
+                  -0.20660483837127686,
+                  -0.017722534015774727,
+                  -0.017722534015774727,
+                  -0.017722534015774727,
+                  -0.10107924044132233,
+                  -0.10107924044132233,
+                  -0.10107924044132233,
+                  -0.010246130637824535,
+                  -0.010246130637824535,
+                  -0.010246130637824535,
+                  -0.010246130637824535,
+                  -0.34351107478141785,
+                  -0.34351107478141785,
+                  -0.34351107478141785,
+                  -0.34351107478141785,
+                  -0.34351107478141785,
+                  -0.6873205900192261,
+                  -0.25893908739089966,
+                  -0.25893908739089966,
+                  -0.25893908739089966,
+                  -0.25893908739089966,
+                  -0.18512099981307983,
+                  -0.18512099981307983,
+                  -0.18512099981307983,
+                  -0.18512099981307983,
+                  0,
+                  -0.8169291615486145,
+                  -0.8169291615486145,
+                  -0.8169291615486145,
+                  0,
+                  0,
+                  0,
+                  -0.09515107423067093,
+                  -0.09515107423067093,
+                  -0.11152894911433361
+                ],
+                [
+                  -0.048292823135852814,
+                  -0.3960005044937134,
+                  -0.6347364783287048,
+                  -0.010137724690139294,
+                  -0.010137724690139294,
+                  0.2242608219385147,
+                  -0.010137724690139294,
+                  -0.010137724690139294,
+                  0.005147682968527079,
+                  -0.3555794358253479,
+                  -0.05670328810811043,
+                  -0.05670328810811043,
+                  -0.40801286697387695,
+                  -0.05670328810811043,
+                  0,
+                  0,
+                  0,
+                  -0.06206054240465164,
+                  0,
+                  0,
+                  0.6393899917602539,
+                  1.7867401838302612,
+                  3.6593594551086426,
+                  3.9606094360351562,
+                  3.9606094360351562,
+                  -0.025755632668733597,
+                  -0.025755632668733597,
+                  -0.025755632668733597,
+                  -0.5793748497962952,
+                  -0.5793748497962952,
+                  -0.5793748497962952,
+                  -0.10479609668254852,
+                  -0.10479609668254852,
+                  -0.10479609668254852,
+                  -0.2528076767921448,
+                  -0.2528076767921448,
+                  -0.2528076767921448,
+                  -0.2528076767921448,
+                  -0.326695054769516,
+                  -0.326695054769516,
+                  -0.326695054769516,
+                  -0.326695054769516,
+                  -0.326695054769516,
+                  -0.41167300939559937,
+                  -0.06206054240465164,
+                  -0.06206054240465164,
+                  -0.06206054240465164,
+                  -0.06206054240465164,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -2.1816773414611816,
+                  0,
+                  0,
+                  0,
+                  -0.4605480432510376,
+                  -0.4605480432510376,
+                  -0.4605480432510376,
+                  0,
+                  0,
+                  -0.20351953196295394
+                ],
+                [
+                  1.2835365533828735,
+                  0.6952802538871765,
+                  0.38129329681396484,
+                  -0.5184833407402039,
+                  -0.5184833407402039,
+                  -0.6025016903877258,
+                  -0.7705027461051941,
+                  -0.5184833407402039,
+                  -0.378257155418396,
+                  -0.01763465441763401,
+                  0,
+                  0,
+                  -0.5825326442718506,
+                  0,
+                  -0.07795370370149612,
+                  -0.07795370370149612,
+                  -0.32680076360702515,
+                  -0.2054377794265747,
+                  -0.07795370370149612,
+                  -0.07795370370149612,
+                  -0.02605019137263298,
+                  0,
+                  -0.17198914289474487,
+                  0,
+                  0,
+                  3.9367778301239014,
+                  3.9367778301239014,
+                  3.9367778301239014,
+                  -0.02605019137263298,
+                  -0.02605019137263298,
+                  -0.02605019137263298,
+                  -0.1646561473608017,
+                  -0.1646561473608017,
+                  -0.1646561473608017,
+                  -0.01763465441763401,
+                  -0.01763465441763401,
+                  -0.01763465441763401,
+                  -0.01763465441763401,
+                  -0.17198914289474487,
+                  -0.17198914289474487,
+                  -0.17198914289474487,
+                  -0.17198914289474487,
+                  -0.17198914289474487,
+                  -0.32448285818099976,
+                  -0.08842984586954117,
+                  -0.08842984586954117,
+                  -0.08842984586954117,
+                  -0.08842984586954117,
+                  -0.7572768926620483,
+                  -0.7572768926620483,
+                  -0.7572768926620483,
+                  -0.7572768926620483,
+                  0,
+                  -0.2025909423828125,
+                  -0.2025909423828125,
+                  -0.2025909423828125,
+                  0,
+                  0,
+                  0,
+                  -1.274439811706543,
+                  -1.274439811706543,
+                  0.14675499104782863
+                ],
+                [
+                  -0.08405724912881851,
+                  -0.1159697100520134,
+                  -0.45019111037254333,
+                  -0.06782082468271255,
+                  -0.06782082468271255,
+                  0.6775424480438232,
+                  -0.06789103150367737,
+                  -0.06782082468271255,
+                  0.4277622103691101,
+                  -0.5700851082801819,
+                  -0.2111356258392334,
+                  -0.2111356258392334,
+                  -0.24350936710834503,
+                  -0.2111356258392334,
+                  0,
+                  0,
+                  -0.000036234065191820264,
+                  -0.10385119915008545,
+                  0,
+                  0,
+                  1.3523112535476685,
+                  -1.5805870294570923,
+                  -0.4873412549495697,
+                  -0.4548199474811554,
+                  -0.4548199474811554,
+                  0,
+                  0,
+                  0,
+                  3.9094772338867188,
+                  3.9094772338867188,
+                  3.9094772338867188,
+                  -0.14487482607364655,
+                  -0.14487482607364655,
+                  -0.14487482607364655,
+                  -0.27952927350997925,
+                  -0.27952927350997925,
+                  -0.27952927350997925,
+                  -0.27952927350997925,
+                  -0.016971465200185776,
+                  -0.016971465200185776,
+                  -0.016971465200185776,
+                  -0.016971465200185776,
+                  -0.016971465200185776,
+                  -0.13316386938095093,
+                  -0.10385119915008545,
+                  -0.10385119915008545,
+                  -0.10385119915008545,
+                  -0.10385119915008545,
+                  -0.00888483040034771,
+                  -0.00888483040034771,
+                  -0.00888483040034771,
+                  -0.00888483040034771,
+                  -1.0888653993606567,
+                  -0.000036234065191820264,
+                  -0.000036234065191820264,
+                  -0.000036234065191820264,
+                  -0.9384788274765015,
+                  -0.9384788274765015,
+                  -0.9384788274765015,
+                  0,
+                  0,
+                  0.14441007016780003
+                ],
+                [
+                  -0.6902403235435486,
+                  -1.0329716205596924,
+                  1.74779212474823,
+                  -0.012339455075562,
+                  -0.012339455075562,
+                  -1.0703693628311157,
+                  -0.18933497369289398,
+                  -0.012339455075562,
+                  1.7358927726745605,
+                  -0.370439738035202,
+                  -0.11600569635629654,
+                  -0.11600569635629654,
+                  -0.4595447778701782,
+                  -0.11600569635629654,
+                  -0.016923028975725174,
+                  -0.016923028975725174,
+                  -0.19187329709529877,
+                  -0.6874878406524658,
+                  -0.016923028975725174,
+                  -0.016923028975725174,
+                  -0.669556200504303,
+                  -0.3021387755870819,
+                  -0.17420925199985504,
+                  -0.04023605212569237,
+                  -0.04023605212569237,
+                  -0.16636435687541962,
+                  -0.16636435687541962,
+                  -0.16636435687541962,
+                  -0.1520417034626007,
+                  -0.1520417034626007,
+                  -0.1520417034626007,
+                  3.497734308242798,
+                  3.497734308242798,
+                  3.497734308242798,
+                  -0.21680794656276703,
+                  -0.21680794656276703,
+                  -0.21680794656276703,
+                  -0.21680794656276703,
+                  -0.09566532075405121,
+                  -0.09566532075405121,
+                  -0.09566532075405121,
+                  -0.09566532075405121,
+                  -0.09566532075405121,
+                  -0.7989398837089539,
+                  -0.6584557294845581,
+                  -0.6584557294845581,
+                  -0.6584557294845581,
+                  -0.6584557294845581,
+                  -0.20018577575683594,
+                  -0.20018577575683594,
+                  -0.20018577575683594,
+                  -0.20018577575683594,
+                  -0.24897122383117676,
+                  -0.1649036705493927,
+                  -0.1649036705493927,
+                  -0.1649036705493927,
+                  -0.18357788026332855,
+                  -0.18357788026332855,
+                  -0.18357788026332855,
+                  -0.2482134848833084,
+                  -0.2482134848833084,
+                  0.3417419569972616
+                ],
+                [
+                  -0.15144285559654236,
+                  -0.215410053730011,
+                  -0.5097958445549011,
+                  -0.11308450996875763,
+                  -0.11308450996875763,
+                  0.5968776941299438,
+                  -0.12842541933059692,
+                  -0.11308450996875763,
+                  0.4694322645664215,
+                  1.8398308753967285,
+                  -0.8870856165885925,
+                  -0.8870856165885925,
+                  -0.9510918855667114,
+                  -0.8870856165885925,
+                  0,
+                  0,
+                  -0.008382285013794899,
+                  -0.13230665028095245,
+                  0,
+                  0,
+                  -1.0883058309555054,
+                  -0.5059097409248352,
+                  -0.17820234596729279,
+                  -0.13273020088672638,
+                  -0.13273020088672638,
+                  0,
+                  0,
+                  0,
+                  -0.18516412377357483,
+                  -0.18516412377357483,
+                  -0.18516412377357483,
+                  -0.1014537513256073,
+                  -0.1014537513256073,
+                  -0.1014537513256073,
+                  2.8012683391571045,
+                  2.8012683391571045,
+                  2.8012683391571045,
+                  2.8012683391571045,
+                  -0.02492016926407814,
+                  -0.02492016926407814,
+                  -0.02492016926407814,
+                  -0.02492016926407814,
+                  -0.02492016926407814,
+                  -0.1777527630329132,
+                  -0.13230665028095245,
+                  -0.13230665028095245,
+                  -0.13230665028095245,
+                  -0.13230665028095245,
+                  -0.017807217314839363,
+                  -0.017807217314839363,
+                  -0.017807217314839363,
+                  -0.017807217314839363,
+                  -0.32362762093544006,
+                  -0.008382285013794899,
+                  -0.008382285013794899,
+                  -0.008382285013794899,
+                  -0.3261554539203644,
+                  -0.3261554539203644,
+                  -0.3261554539203644,
+                  -0.002620874671265483,
+                  -0.002620874671265483,
+                  0.11101019264274051
+                ],
+                [
+                  -0.6960369944572449,
+                  0.4300481081008911,
+                  0.10319828987121582,
+                  -0.08344704657793045,
+                  -0.08344704657793045,
+                  -0.4541062116622925,
+                  -0.5058956146240234,
+                  -0.08344704657793045,
+                  -0.6686962246894836,
+                  -0.10425812005996704,
+                  -0.10425812005996704,
+                  -0.10425812005996704,
+                  1.0048032999038696,
+                  -0.10425812005996704,
+                  -0.25662389397621155,
+                  -0.25662389397621155,
+                  -0.7157503962516785,
+                  -0.586693286895752,
+                  -0.25662389397621155,
+                  -0.25662389397621155,
+                  -0.20787398517131805,
+                  -0.19728191196918488,
+                  1.7244259119033813,
+                  -0.1690240353345871,
+                  -0.1690240353345871,
+                  -0.09204272925853729,
+                  -0.09204272925853729,
+                  -0.09204272925853729,
+                  0,
+                  0,
+                  0,
+                  -0.002636813558638096,
+                  -0.002636813558638096,
+                  -0.002636813558638096,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.9204249382019043,
+                  1.9204249382019043,
+                  1.9204249382019043,
+                  1.9204249382019043,
+                  1.9204249382019043,
+                  1.598999261856079,
+                  -0.2498345673084259,
+                  -0.2498345673084259,
+                  -0.2498345673084259,
+                  -0.2498345673084259,
+                  -0.16469840705394745,
+                  -0.16469840705394745,
+                  -0.16469840705394745,
+                  -0.16469840705394745,
+                  -0.014872916042804718,
+                  -0.3595576882362366,
+                  -0.3595576882362366,
+                  -0.3595576882362366,
+                  -0.005488951690495014,
+                  -0.005488951690495014,
+                  -0.005488951690495014,
+                  -0.20240122079849243,
+                  -0.20240122079849243,
+                  -0.13154555076075297
+                ],
+                [
+                  -0.3539094626903534,
+                  -1.0133856534957886,
+                  0.5533921122550964,
+                  -0.031186088919639587,
+                  -0.031186088919639587,
+                  -0.7294453382492065,
+                  -0.14780482649803162,
+                  -0.031186088919639587,
+                  0.9171927571296692,
+                  -0.20083042979240417,
+                  -0.0838918462395668,
+                  -0.0838918462395668,
+                  -0.7527042031288147,
+                  -0.0838918462395668,
+                  -0.26390767097473145,
+                  -0.26390767097473145,
+                  -0.3850002586841583,
+                  1.9246277809143066,
+                  -0.26390767097473145,
+                  -0.26390767097473145,
+                  -0.444438636302948,
+                  -0.19201597571372986,
+                  -0.27131620049476624,
+                  -0.05568750202655792,
+                  -0.05568750202655792,
+                  -0.03735148534178734,
+                  -0.03735148534178734,
+                  -0.03735148534178734,
+                  -0.06878463923931122,
+                  -0.06878463923931122,
+                  -0.06878463923931122,
+                  -0.5904374718666077,
+                  -0.5904374718666077,
+                  -0.5904374718666077,
+                  -0.08016250282526016,
+                  -0.08016250282526016,
+                  -0.08016250282526016,
+                  -0.08016250282526016,
+                  -0.19168519973754883,
+                  -0.19168519973754883,
+                  -0.19168519973754883,
+                  -0.19168519973754883,
+                  -0.19168519973754883,
+                  1.996727466583252,
+                  2.231555223464966,
+                  2.231555223464966,
+                  2.231555223464966,
+                  2.231555223464966,
+                  -0.09114118665456772,
+                  -0.09114118665456772,
+                  -0.09114118665456772,
+                  -0.09114118665456772,
+                  -0.09900322556495667,
+                  -0.0883355587720871,
+                  -0.0883355587720871,
+                  -0.0883355587720871,
+                  -0.10294178873300552,
+                  -0.10294178873300552,
+                  -0.10294178873300552,
+                  -0.09413070976734161,
+                  -0.09413070976734161,
+                  -0.062084875485537254
+                ],
+                [
+                  0.9024032354354858,
+                  0.3756867051124573,
+                  0.23784789443016052,
+                  -0.46007317304611206,
+                  -0.46007317304611206,
+                  -0.5571536421775818,
+                  -0.6909773945808411,
+                  -0.46007317304611206,
+                  -0.21871839463710785,
+                  0,
+                  0,
+                  0,
+                  -0.5145217180252075,
+                  0,
+                  -0.1566140055656433,
+                  -0.1566140055656433,
+                  -0.38130494952201843,
+                  -0.18856069445610046,
+                  -0.1566140055656433,
+                  -0.1566140055656433,
+                  -0.07411173731088638,
+                  -0.04100973531603813,
+                  -0.09557390958070755,
+                  0,
+                  0,
+                  -0.6805515885353088,
+                  -0.6805515885353088,
+                  -0.6805515885353088,
+                  0,
+                  0,
+                  0,
+                  -0.10967373847961426,
+                  -0.10967373847961426,
+                  -0.10967373847961426,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.09557390958070755,
+                  -0.09557390958070755,
+                  -0.09557390958070755,
+                  -0.09557390958070755,
+                  -0.09557390958070755,
+                  -0.11603769659996033,
+                  -0.010422999039292336,
+                  -0.010422999039292336,
+                  -0.010422999039292336,
+                  -0.010422999039292336,
+                  3.164836883544922,
+                  3.164836883544922,
+                  3.164836883544922,
+                  3.164836883544922,
+                  -0.04100973531603813,
+                  -0.15524138510227203,
+                  -0.15524138510227203,
+                  -0.15524138510227203,
+                  -0.018225638195872307,
+                  -0.018225638195872307,
+                  -0.018225638195872307,
+                  -0.9605479836463928,
+                  -0.9605479836463928,
+                  0.07090231279338646
+                ],
+                [
+                  -0.15667490661144257,
+                  -0.2048889398574829,
+                  -0.4674094617366791,
+                  -0.12336817383766174,
+                  -0.12336817383766174,
+                  0.8414548635482788,
+                  -0.17018429934978485,
+                  -0.12336817383766174,
+                  0.753082275390625,
+                  -0.6439035534858704,
+                  -0.332674503326416,
+                  -0.332674503326416,
+                  -0.38094112277030945,
+                  -0.332674503326416,
+                  0,
+                  0,
+                  -0.025652991607785225,
+                  -0.07528657466173172,
+                  0,
+                  0,
+                  1.6477572917938232,
+                  3.85864520072937,
+                  -2.290900945663452,
+                  -2.290900945663452,
+                  -2.290900945663452,
+                  0,
+                  0,
+                  0,
+                  -1.0783729553222656,
+                  -1.0783729553222656,
+                  -1.0783729553222656,
+                  -0.15235386788845062,
+                  -0.15235386788845062,
+                  -0.15235386788845062,
+                  -0.26129773259162903,
+                  -0.26129773259162903,
+                  -0.26129773259162903,
+                  -0.26129773259162903,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.07528657466173172,
+                  -0.07528657466173172,
+                  -0.07528657466173172,
+                  -0.07528657466173172,
+                  -0.07528657466173172,
+                  0,
+                  0,
+                  0,
+                  0,
+                  6.141966342926025,
+                  -0.025652991607785225,
+                  -0.025652991607785225,
+                  -0.025652991607785225,
+                  -1.1253635883331299,
+                  -1.1253635883331299,
+                  -1.1253635883331299,
+                  -0.018216697499155998,
+                  -0.018216697499155998,
+                  0.2677269216384223
+                ],
+                [
+                  -0.9762909412384033,
+                  0.38710322976112366,
+                  0.2982478737831116,
+                  -0.5128960609436035,
+                  -0.5128960609436035,
+                  -0.7379803657531738,
+                  2.1947076320648193,
+                  -0.5128960609436035,
+                  -0.2779700458049774,
+                  -0.12335176020860672,
+                  -0.12335176020860672,
+                  -0.12335176020860672,
+                  1.2401814460754395,
+                  -0.12335176020860672,
+                  -0.8527397513389587,
+                  -0.8527397513389587,
+                  1.8050178289413452,
+                  -0.853039562702179,
+                  -0.8527397513389587,
+                  -0.8527397513389587,
+                  -0.025797521695494652,
+                  0,
+                  -0.3477236032485962,
+                  0,
+                  0,
+                  -0.10600408166646957,
+                  -0.10600408166646957,
+                  -0.10600408166646957,
+                  0,
+                  0,
+                  0,
+                  -0.07113263010978699,
+                  -0.07113263010978699,
+                  -0.07113263010978699,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.3477236032485962,
+                  -0.3477236032485962,
+                  -0.3477236032485962,
+                  -0.3477236032485962,
+                  -0.3477236032485962,
+                  -0.34804466366767883,
+                  -0.00007141324749682099,
+                  -0.00007141324749682099,
+                  -0.00007141324749682099,
+                  -0.00007141324749682099,
+                  -0.018103407695889473,
+                  -0.018103407695889473,
+                  -0.018103407695889473,
+                  -0.018103407695889473,
+                  0,
+                  2.7555949687957764,
+                  2.7555949687957764,
+                  2.7555949687957764,
+                  -0.025797521695494652,
+                  -0.025797521695494652,
+                  -0.025797521695494652,
+                  -0.2134637087583542,
+                  -0.2134637087583542,
+                  0.04446507635409725
+                ],
+                [
+                  -0.17086297273635864,
+                  -0.1907215565443039,
+                  -0.42717549204826355,
+                  -0.12330154329538345,
+                  -0.12330154329538345,
+                  0.5575746893882751,
+                  -0.12330154329538345,
+                  -0.12330154329538345,
+                  0.48705920577049255,
+                  -0.5949530601501465,
+                  -0.27622169256210327,
+                  -0.27622169256210327,
+                  -0.29961055517196655,
+                  -0.27622169256210327,
+                  -0.0074428170919418335,
+                  -0.0074428170919418335,
+                  -0.0074428170919418335,
+                  -0.07766098529100418,
+                  -0.0074428170919418335,
+                  -0.0074428170919418335,
+                  1.3259178400039673,
+                  -1.6116602420806885,
+                  -0.636634111404419,
+                  -0.636634111404419,
+                  -0.636634111404419,
+                  0,
+                  0,
+                  0,
+                  -0.932751476764679,
+                  -0.932751476764679,
+                  -0.932751476764679,
+                  -0.1359478235244751,
+                  -0.1359478235244751,
+                  -0.1359478235244751,
+                  -0.23958095908164978,
+                  -0.23958095908164978,
+                  -0.23958095908164978,
+                  -0.23958095908164978,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.06353673338890076,
+                  -0.06353673338890076,
+                  -0.06353673338890076,
+                  -0.06353673338890076,
+                  -0.06353673338890076,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.9109869599342346,
+                  0,
+                  0,
+                  0,
+                  3.9376749992370605,
+                  3.9376749992370605,
+                  3.9376749992370605,
+                  -0.026050901040434837,
+                  -0.026050901040434837,
+                  0.13515841234242015
+                ],
+                [
+                  1.8084686994552612,
+                  1.1481025218963623,
+                  0.8215102553367615,
+                  -0.8001530766487122,
+                  -0.8001530766487122,
+                  -0.8479885458946228,
+                  -0.9166341423988342,
+                  -0.8001530766487122,
+                  -0.37380701303482056,
+                  -0.01612427644431591,
+                  -0.01612427644431591,
+                  -0.01612427644431591,
+                  -0.6874240636825562,
+                  -0.01612427644431591,
+                  -0.2846137583255768,
+                  -0.2846137583255768,
+                  -0.422721803188324,
+                  -0.3641584515571594,
+                  -0.2846137583255768,
+                  -0.2846137583255768,
+                  -0.008742909878492355,
+                  -0.008514843881130219,
+                  -0.24673597514629364,
+                  -0.008514843881130219,
+                  -0.008514843881130219,
+                  -1.3698054552078247,
+                  -1.3698054552078247,
+                  -1.3698054552078247,
+                  -0.000048569370846962556,
+                  -0.000048569370846962556,
+                  -0.000048569370846962556,
+                  -0.27805519104003906,
+                  -0.27805519104003906,
+                  -0.27805519104003906,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.2303382009267807,
+                  -0.2303382009267807,
+                  -0.2303382009267807,
+                  -0.2303382009267807,
+                  -0.2303382009267807,
+                  -0.27948328852653503,
+                  -0.04664099961519241,
+                  -0.04664099961519241,
+                  -0.04664099961519241,
+                  -0.04664099961519241,
+                  -1.043497920036316,
+                  -1.043497920036316,
+                  -1.043497920036316,
+                  -1.043497920036316,
+                  0,
+                  -0.10509737581014633,
+                  -0.10509737581014633,
+                  -0.10509737581014633,
+                  0,
+                  0,
+                  0,
+                  5.032336235046387,
+                  5.032336235046387,
+                  0.3893597116976839
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "How do you usually spend your free time?"
+      ],
+      [
+        "en",
+        "What are your favorite hobbies or interests?"
+      ],
+      [
+        "en",
+        "Do you prefer working in a team or independently?"
+      ],
+      [
+        "en",
+        "What is your greatest achievement so far?"
+      ],
+      [
+        "en",
+        "How do you deal with failure?"
+      ],
+      [
+        "en",
+        "What is your opinion about life?"
+      ],
+      [
+        "en",
+        "What makes you feel alive?"
+      ],
+      [
+        "en",
+        "What are your plans for the future?"
+      ],
+      [
+        "en",
+        "Do you have any goal or objective you want to achieve?"
+      ],
+      [
+        "en",
+        "What inspires you to be a better person?"
+      ],
+      [
+        "en",
+        "How do you handle challenges and adversities?"
+      ],
+      [
+        "en",
+        "What is your greatest fear?"
+      ],
+      [
+        "en",
+        "Do you believe in destiny or free will?"
+      ],
+      [
+        "en",
+        "What is your perspective on love?"
+      ],
+      [
+        "en",
+        "How do you define success?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "question.free_time_activities": [
+          {
+            "answer": "I enjoy reading, practicing sports, and spending time outdoors."
+          }
+        ],
+        "question.hobbies_interests": [
+          {
+            "answer": "My favorite hobbies include photography, gardening, and cooking."
+          }
+        ],
+        "question.teamwork_preference": [
+          {
+            "answer": "I prefer working in a team, but I'm also effective when working independently."
+          }
+        ],
+        "question.greatest_achievement": [
+          {
+            "answer": "My greatest achievement so far was completing a marathon."
+          }
+        ],
+        "question.failure_handling": [
+          {
+            "answer": "I see failure as an opportunity for learning and growth."
+          }
+        ],
+        "question.life_opinion": [
+          {
+            "answer": "Life is a journey filled with ups and downs, but it's worth living to the fullest."
+          }
+        ],
+        "question.alive_feeling": [
+          {
+            "answer": "Being surrounded by nature and spending time with loved ones makes me feel alive."
+          }
+        ],
+        "question.future_plans": [
+          {
+            "answer": "I have plans to travel to different countries and specialize in my career."
+          }
+        ],
+        "question.goals_objectives": [
+          {
+            "answer": "My current goal is to become fluent in a new language."
+          }
+        ],
+        "question.inspiration_better_person": [
+          {
+            "answer": "The opportunity to make a difference in people's lives inspires me to be a better person."
+          }
+        ],
+        "question.challenges_adversities_handling": [
+          {
+            "answer": "I face challenges with determination and a positive mindset."
+          }
+        ],
+        "question.greatest_fear": [
+          {
+            "answer": "My greatest fear is not fulfilling my dreams and aspirations."
+          }
+        ],
+        "question.destiny_free_will": [
+          {
+            "answer": "I believe in a combination of destiny and free will."
+          }
+        ],
+        "question.love_perspective": [
+          {
+            "answer": "To me, love is a deep connection and mutual commitment."
+          }
+        ],
+        "question.success_definition": [
+          {
+            "answer": "Success to me is achieving my goals and being happy with who I am."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

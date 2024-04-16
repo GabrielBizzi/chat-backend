@@ -1,0 +1,23 @@
+{
+  "name": "tensor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon natural.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-node": "^4.17.0",
+    "body-parser": "^1.20.2",
+    "brain.js": "^2.0.0-beta.23",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "natural": "^7.0.1",
+    "node-nlp": "^4.27.0",
+    "nodemon": "^3.1.0"
+  }
+}
